@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Publish Your Book</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label floating>Title</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Date</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Description</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Contact info</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+    <button ion-button (click)="addPic()">Add Picture</button>
+    <button ion-button (click)="publishPost()">Publish Post</button>
+
+
+</ion-content>
