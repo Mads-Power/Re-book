@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
+import { Injectable } from "@angular/core";
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Post } from '../../app/models/post.model';
+import { PostListService } from '../../services/posts-list/posts-list.service';
 
 
+
+Injectable()
 @IonicPage()
 @Component({
   selector: 'page-publish',
@@ -11,8 +17,20 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class PublishPage {
 
+
+  post: Post = {
+    name:'',
+    date:'',
+    description:'',
+    phoneNr:undefined
+
+  }
+
+  public postText: string = "";
+  
   constructor(private camera: Camera,
-    public navCtrl: NavController, public navParams: NavParams) {
+    public navCtrl: NavController, public navParams: NavParams, private pubPost: PostListService, 
+    public alertCtrl: AlertController ) {
   }
 
   ionViewDidLoad() {
@@ -35,8 +53,29 @@ export class PublishPage {
     }, (err)=>{
       console.log(err);
     });
-    
 
+   }
+  
+
+  addNewPost(post: Post){
+     try{
+      this.pubPost.addPost(post).then(ref =>{
+        this.navCtrl.push('HomePage');
+
+      })
+    } catch{
+      let alert = this.alertCtrl.create({
+        title: 'Fill out all details please!',
+        buttons: ['OK']
+       
+      });
+      alert.present();
+      this.navCtrl.push('PublishPage');
+    }
+  }
+
+  backBtn(){
+    this.navCtrl.push('HomePage');
   }
   
 

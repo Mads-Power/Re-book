@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { User } from '../../app/models/user';
 import{ AngularFireAuth } from "angularfire2/auth";
 
@@ -17,7 +17,7 @@ export class LoginPage {
 
 
   constructor(private afAuth:AngularFireAuth,
-    public navCtrl: NavController, public navParams: NavParams) {
+    public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -31,11 +31,17 @@ export class LoginPage {
      if(result){
       this.navCtrl.push('HomePage');
      }
-
-
-  }catch(e){
+   }catch(e){
         console.error(e);
-    }
+        let alert = this.alertCtrl.create({
+          title: 'Register or sign in!',
+          buttons: ['OK']
+         
+        });
+        alert.present();
+        
+      }
+    
   }
   register(){
     this.navCtrl.push('RegisterPage');

@@ -10,6 +10,9 @@ import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import{ AngularFireAuthModule } from "angularfire2/auth";
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { PostListService } from '../services/posts-list/posts-list.service';
+
 
 
 
@@ -34,7 +37,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
     SplashScreen,
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    AngularFireDatabase,
+    PostListService
+    
   ]
 })
 export class AppModule {}

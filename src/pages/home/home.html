@@ -1,29 +1,55 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>home</ion-title>
+  <ion-navbar color="primary">
+    <ion-title >{{title}}Re-Book</ion-title>
+    
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="bg-image" >
+    <button ion-button color="secondary" (click)="logOut()">Log Out</button>
+    
     <ion-card *ngFor = "let post of posts">
-        <img src=""/>
+        
         <ion-card-content>
          <ion-card-title>
            {{post.title}}
             </ion-card-title>
-            <h2>{{post.name}}</h2>
-          <p>
-            {{post.content}}
-          </p>
-          <p>{{post.date}}</p>
+            <h2>Name: {{post.name}}</h2>
+
+          <p>Book:  {{post.content}}</p>
+
+          <p>Date: {{post.date}}</p>
+
+          <p> Phone number:{{post.phoneNr}}</p>
     
         </ion-card-content>
       </ion-card>
 
+      <ion-list>
+        <ion-list-header>
+          Your Posts
+        </ion-list-header>
+        <ion-item *ngFor="let post of postList$ | async" >
+          <ion-card>
+
+            <ion-card-content>
+              <ion-card-title>
+                <p>Name: {{post.name}}</p>
+                <p>Date: {{post.date}}</p>
+                <p>Description: {{post.description}}</p>
+                <p>phone Number: {{post.phoneNr}}</p>
+               </ion-card-title>
+            </ion-card-content>
+      </ion-card>
+          </ion-item>
+         </ion-list>
+       
+
       <button ion-button (click)="publish()">Publish Book</button>
+     
 
 </ion-content>

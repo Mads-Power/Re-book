@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import{AngularFireAuth} from "angularfire2/auth";
 import { User } from '../../app/models/user';
+
  
 
 
@@ -12,6 +13,8 @@ import { User } from '../../app/models/user';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+
+  
 
   user ={} as User;
 
