@@ -10,34 +10,35 @@
 
 
 <ion-content padding class="bg-image" >
-    <button ion-button color="secondary" (click)="logOut()">Log Out</button>
+    <button ion-button color="#aecbf9" (click)="logOut()">Log Out</button>
     
-    <ion-card *ngFor = "let post of posts">
+    <ion-card *ngFor = "let post of posts" class="ion-card">
         
         <ion-card-content>
+
          <ion-card-title>
            {{post.title}}
             </ion-card-title>
-            <h2>Name: {{post.name}}</h2>
-
-          <p>Book:  {{post.content}}</p>
-
-          <p>Date: {{post.date}}</p>
-
-          <p> Phone number:{{post.phoneNr}}</p>
+              <img src="../assets/imgs/probook1.jpg" alt="" height="100px" width="100px">
+             <h2>Name: {{post.name}}</h2>
+             <p>Book:  {{post.content}}</p>
+             <p>Date: {{post.date}}</p>
+             <p> Phone number:{{post.phoneNr}}</p>
     
         </ion-card-content>
       </ion-card>
 
-      <ion-list>
-        <ion-list-header>
+      <ion-list class="ion-list">
+
+        
+        <ion-list-header class="header"  >
           Your Posts
         </ion-list-header>
-        <ion-item *ngFor="let post of postList$ | async" >
-          <ion-card>
-
-            <ion-card-content>
+        <ion-item class="ion-item" *ngFor="let post of postList$ | async" >
+          <ion-card class="ion-cardPost">
+            <ion-card-content class="ion-content">
               <ion-card-title>
+                
                 <p>Name: {{post.name}}</p>
                 <p>Date: {{post.date}}</p>
                 <p>Description: {{post.description}}</p>

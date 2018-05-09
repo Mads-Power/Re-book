@@ -16,6 +16,7 @@ export class HomePage {
 
   public posts: any = [
     {
+      
       title: "BUY MEEEE",
     name: "steve",
     date: "October.18.10.2017",

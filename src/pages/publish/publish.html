@@ -9,25 +9,25 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="bg-image">
   
-    <ion-item>
-      <ion-label >Name</ion-label>
+    <ion-item class="ion-item">
+      <ion-label class="label">Name</ion-label>
       <ion-input [(ngModel)]="post.name" placeholder="Arne"></ion-input>
     </ion-item>
     
-      <ion-item>
-          <ion-label >Date</ion-label>
+      <ion-item class="ion-item">
+          <ion-label class="label" >Date</ion-label>
           <ion-input [(ngModel)]="post.date" placeholder="11.05.18"></ion-input>
       </ion-item>
 
-      <ion-item>
-          <ion-label>Description</ion-label>
+      <ion-item class="ion-item">
+          <ion-label class="label">Description</ion-label>
           <ion-input [(ngModel)]="post.description" placeholder="Kryssplatform bok1"></ion-input>
       </ion-item>
 
-      <ion-item>
-          <ion-label>Contact phone number</ion-label>
+      <ion-item class="ion-item">
+          <ion-label class="label">Contact phone number</ion-label>
         <ion-input [(ngModel)]="post.phoneNr" type="tel" maxlength="8" placeholder="tlf:9999999" ></ion-input>
       </ion-item>
     

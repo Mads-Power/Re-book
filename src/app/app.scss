@@ -1,13 +1,75 @@
-.title{
-    text-align:center;
-    }
 
-    page-home{
 
+$background-trans: transparent;
+
+
+ page-login{
     .bg-image {
-        background-image: url('../assets/img/homeBc.jpg');
+        background-image: url('../assets/imgs/clouds1.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
-    }
+        background-size: cover;
+        }
+
+        .ion-item{
+            background: #aecbf9 !important;
+            margin-top: 16px;
+            background-color: transparent
+            
+         }
 }
+page-home{
+    .bg-image {
+        background-image: url('../assets/imgs/cloud2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .ion-card {background: $background-trans;}
+
+        .ion-item{background: $background-trans;}
+
+        .ion-cardPost{background-color:  #aecbf9;}
+
+        .header{text-align:center;
+             color: black;
+              text-shadow: steelblue; 
+              font-size: 20px; border: steelblue; background: steelblue
+            }
+}
+page-publish{
+    .bg-image {
+        background-image: url('../assets/imgs/starySky.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .ion-item{
+            background: #aecbf9 !important;
+            margin-top: 16px;
+            background-color: transparent
+            
+         }
+         .label{
+             font-size: 15px;
+             font-weight: bold
+         }
+
+}
+page-register{
+    .bg-image {
+        background-image: url('../assets/imgs/starySky2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .ion-item{
+            background: #aecbf9 !important;
+            margin-top: 16px;
+            background-color: transparent
+            
+         }
+}
+         .title{text-align:center;}
+
