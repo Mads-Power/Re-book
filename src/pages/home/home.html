@@ -1,11 +1,13 @@
 
 <ion-header>
-
-  <ion-navbar color="primary">
-    <ion-title >{{title}}Re-Book</ion-title>
     
-  </ion-navbar>
-
+  <ion-navbar color="primary">
+    
+    <ion-title>{{title}}Re-Book</ion-title>
+ 
+   </ion-navbar>
+  
+   
 </ion-header>
 
 
@@ -16,14 +18,16 @@
         
         <ion-card-content>
 
-         <ion-card-title>
+         <ion-card-title class="ion-card-title">
            {{post.title}}
             </ion-card-title>
-              <img src="../assets/imgs/probook1.jpg" alt="" height="100px" width="100px">
+              <img src="../assets/imgs/probook1.jpg" alt="">
+              <div class="wrapContent">
              <h2>Name: {{post.name}}</h2>
              <p>Book:  {{post.content}}</p>
              <p>Date: {{post.date}}</p>
              <p> Phone number:{{post.phoneNr}}</p>
+            </div>
     
         </ion-card-content>
       </ion-card>
@@ -50,7 +54,6 @@
          </ion-list>
        
 
-      <button ion-button (click)="publish()">Publish Book</button>
-     
-
-</ion-content>
+      <button menu-toggle ion-button (click)="publish()">Publish Book</button>
+     </ion-content>
+    

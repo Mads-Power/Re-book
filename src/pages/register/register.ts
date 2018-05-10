@@ -23,6 +23,7 @@ export class RegisterPage {
   }
 
   async register(user:User){
+    //lager bruker og lagrer i firebase
     try{
      const result = await this.afAuth.auth.
      createUserWithEmailAndPassword(this.user.email, this.user.password);

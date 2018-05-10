@@ -24,6 +24,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   async login(user:User){
+    //Henter bruker info fra firebae for å autentisere at brukeren er reistrert
     try{
     const result =  this.afAuth.auth
     .signInWithEmailAndPassword(this.user.email, this.user.password);

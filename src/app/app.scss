@@ -32,11 +32,18 @@ page-home{
 
         .ion-cardPost{background-color:  #aecbf9;}
 
+        .ion-card-title{background-color:#aecbf9; text-align: center}
+
+        .wrapContent{background-color:#aecbf9; padding: 5px}
+
         .header{text-align:center;
              color: black;
               text-shadow: steelblue; 
               font-size: 20px; border: steelblue; background: steelblue
             }
+           
+            $toolbar-ios-title-font-size:50px;
+            .title{text-align: center; text-anchor: $background-trans}
 }
 page-publish{
     .bg-image {
@@ -67,9 +74,10 @@ page-register{
         .ion-item{
             background: #aecbf9 !important;
             margin-top: 16px;
-            background-color: transparent
-            
-         }
+            background-color: transparent;
+             }
 }
-         .title{text-align:center;}
+         
+
+         
 
