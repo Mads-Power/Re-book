@@ -42,8 +42,10 @@ page-home{
               font-size: 20px; border: steelblue; background: steelblue
             }
            
-            $toolbar-ios-title-font-size:50px;
-            .title{text-align: center; text-anchor: $background-trans}
+            .titleS{
+                font-size: 70px
+            }
+            
 }
 page-publish{
     .bg-image {
@@ -79,5 +81,5 @@ page-register{
 }
          
 
-         
+.title{text-align: center;}
 

@@ -1,18 +1,15 @@
 
 <ion-header>
-    
-  <ion-navbar color="primary">
-    
-    <ion-title>{{title}}Re-Book</ion-title>
- 
-   </ion-navbar>
-  
-   
+   <ion-navbar hideBackButton color="blueish">
+     <ion-title class="titleS">{{title}}Re-Book</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
+
 <ion-content padding class="bg-image" >
-    <button ion-button color="#aecbf9" (click)="logOut()">Log Out</button>
+    <button ion-button color="blueish" (click)="logOut()">Log Out</button>
+    <button  color="blueish" ion-button (click)="publish()">Publish Book</button>
     
     <ion-card *ngFor = "let post of posts" class="ion-card">
         
@@ -54,6 +51,7 @@
          </ion-list>
        
 
-      <button menu-toggle ion-button (click)="publish()">Publish Book</button>
+     
      </ion-content>
+    
     

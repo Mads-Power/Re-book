@@ -1,7 +1,7 @@
 
 <ion-header>
 
-  <ion-navbar color="primary">
+  <ion-navbar color="primary" color="blueish">
       
     <ion-title>Register</ion-title>
   </ion-navbar>
@@ -19,7 +19,7 @@
         <ion-label fixed>Password</ion-label>
         <ion-input type="password" [(ngModel)]="user.password"></ion-input>
       </ion-item>
-      <button ion-button (click)="register(user)" >Register</button>
-      <button ion-button (click)="backBtn()">Login page</button>
+      <button ion-button color="blueish" (click)="register(user)" >Register</button>
+      <button ion-button color="blueish" (click)="backBtn()">Login page</button>
 
 </ion-content>

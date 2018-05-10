@@ -1,9 +1,9 @@
 
 <ion-header>
 
-  <ion-navbar color="primary" >
+  <ion-navbar hideBackButton color="blueish" >
       
-    <ion-title>Publish Your Book</ion-title>
+    <ion-title>{{title}} Publish Your Book</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -33,9 +33,9 @@
     
    
 
-    <button ion-button (click)="addPic()"> Open camera</button>
-    <button ion-button (click)="addNewPost(post)">Publish Post</button>
-    <button ion-button (click)="backBtn()">Back to Feed Page</button>
+    <button ion-button color="blueish" (click)="addPic()"> Open camera</button>
+    <button ion-button color="blueish" (click)="addNewPost(post)">Publish Post</button>
+    <button ion-button color="blueish" (click)="backBtn()">Back to Feed Page</button>
 
 
 </ion-content>
